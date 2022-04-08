@@ -1,42 +1,47 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
- <meta charset="utf-8">
- <title>Calculator</title>
- <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic calculator</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
-<div class="calculator">
-    <div class="text"><strong>Basic calculator #Matli</strong></div>
-    <div class="screen">
-    <td colspan = "3"> <input class = "display-box" type = "text" id = "result" disabled /> </td>
-</div>
- <div class="buttons">
-  <input class = "button" type = "button" value = "m" onclick = "display('')" /> 
-  <input class = "button" type = "button" value = "mc" onclick = "display('')" /> 
-  <input class = "button" type = "button" value = "&#8592" onclick ="deleteNumber('')" />
-  <input class = "button" type = "button" value = "C" onclick = "clearScreen()" />
-  <input class = "button" type = "button" value = "1" onclick = "display('1')" /> 
-  <input class = "button" type = "button" value = "2" onclick = "display('2')" /> 
-  <input class = "button" type = "button" value = "3" onclick = "display('3')" />
-  <input class = "button" type = "button" value = "/" onclick = "display('/')" /> 
-  <input class = "button" type = "button" value = "4" onclick = "display('4')" /> 
-  <input class = "button" type = "button" value = "5" onclick = "display('5')" /> 
-  <input class = "button" type = "button" value = "6" onclick = "display('6')" /> 
-  <input class = "button" type = "button" value = "*" onclick = "display('*')" /> 
-  <input class = "button" type = "button" value = "7" onclick = "display('7')" /> 
-  <input class = "button" type = "button" value = "8" onclick = "display('8')" /> 
-  <input class = "button" type = "button" value = "9" onclick = "display('9')" /> 
-  <input class = "button" type = "button" value = "-" onclick = "display('-')" /> 
-  <input class = "button" type = "button" value = "." onclick = "display('.')" /> 
-  <input class = "button" type = "button" value = "0" onclick = "display('0')" /> 
-  <input class = "button" type = "button" value = "=" onclick = "calculate()"  /> 
-  <input class = "button" type = "button" value = "+" onclick = "display('+')" /> 
-</div>
-</div>
-<footer>&copy; 2022 Matli Projects</footer>
-</div>
+    <section>
+      <div class="container">
+        <div class="calculator">
+          <div class="text"><strong>Basic calculator #Matli</strong></div>
+          <div class="screen">
+          <div id="display"></div>
+
+          </div>
+          <div class="buttons">
+           <button><div class="button">(</div></button>
+            <button><div class="button">)</div></button>
+            <button><div class="button">Clear</div></button>
+            <button><div class="button">Delete</div></button>
+            <button><div class="button">7</div></button>
+            <button><div class="button">8</div></button>
+            <button><div class="button">9</div></button>
+            <button><div class="button">+</div></button>
+            <button><div class="button">4</div></button>
+            <button><div class="button">5</div></button>
+            <button><div class="button">6</div></button>
+            <button><div class="button">-</div></button>
+            <button><div class="button">1</div></button>
+            <button><div class="button">2</div></button>
+            <button><div class="button">3</div></button>
+            <button><div class="button">*</div></button>
+            <button><div class="button">.</div></button>
+            <button><div class="button">0</div></button>
+            <button><div id="equal" class="button">=</div></button>
+            <button><div class="button">/</div></button>
+          </div>
+        </div>
+        <footer>&copy; 2022 Matli Projects</footer>
+      </div>
+    </section>
 <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
