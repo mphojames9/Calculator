@@ -1,17 +1,27 @@
+let display = document.getElementById('display');
 
-function clearScreen() {
- document.getElementById("result").value = "";
-}
+let buttons = Array.from(document.getElementsByClassName('button'));
 
-function display(value) {
- document.getElementById("result").value += value;
-}
-function calculate() {
- var p = document.getElementById("result").value;
- var q = eval(p);
- document.getElementById("result").value = q;
-}
-  function deleteNumber() {
-    var value = document.getElementById("result").value;
-    document.getElementById("result").value = value.substr(0, value.length - 1);
-}
+buttons.map( button => {
+    button.addEventListener('click', (e) => {
+        switch(e.target.innerText){
+            case 'Clear': //This is for clearing the display.
+                display.innerText = '';
+                break;
+            case '=':
+                try{
+                    display.innerText = eval(display.innerText);
+                } catch {
+                    display.innerText = "Error"
+                }
+                break;
+            case 'Delete': //Deleting the innerText one at a time.
+                if (display.innerText){
+                   display.innerText = display.innerText.slice(0, -1);
+                }
+                break;
+            default:
+                display.innerText += e.target.innerText;
+        }
+    });
+});
