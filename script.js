@@ -1,6 +1,6 @@
 const display_1 = document.querySelector(".display_1");
 const display_2 = document.querySelector(".display_2");
-const results_display = document.querySelector(".display_3");
+let results_display = document.querySelector(".display_3");
 const numberBtn = document.querySelectorAll(".number");
 const clearBtn = document.querySelector(".clearAll");
 const deleteBtn = document.querySelector(".deleteBtn");
@@ -62,11 +62,32 @@ function mathOperation(){
     else if(lastOperation === "%"){
         result = parseFloat(result) % parseFloat(disNum2);
     }
-    console.log(result)
 }
     
 
 equalBtn.addEventListener("click",(e)=>{
     mathOperation();
-    clearVar();
-})
+    haveDot = false;
+    disNum1 += disNum2;
+    display_1.innerText = disNum1;
+    disNum2 = parseFloat(result);
+    display_2.innerText = disNum2;
+    results_display.innerText = " ";
+    disNum1 = " ";
+    disNum2 = " ";
+});
+
+clearBtn.addEventListener("click",(e)=>{
+    disNum1 = " ";
+    disNum2 = " ";
+    display_1.innerText = "0";
+    display_2.innerText = "0 ";
+    results_display.innerText = " ";
+    result = " ";
+});
+
+deleteBtn.addEventListener("click", (e)=>{
+    disNum2 = " ";
+    display_2.innerText = " ";
+});
+
