@@ -41,10 +41,10 @@ operationBtn.forEach(operation => operation.addEventListener("click", (e)=>{
 }))
 
 function clearVar(name){
-    disNum1 += disNum2 +" "+ name + "";
+    disNum1 += disNum2 +" "+ name + " ";
     display_1.innerText = disNum1;
-    disNum2 = " ";
-    display_2.innerText =" ";
+    disNum2 = "";
+    display_2.innerText ="";
     results_display.innerText = result;
 }
 
@@ -72,22 +72,23 @@ equalBtn.addEventListener("click",(e)=>{
     display_1.innerText = disNum1;
     disNum2 = parseFloat(result);
     display_2.innerText = disNum2;
-    results_display.innerText = " ";
-    disNum1 = " ";
-    disNum2 = " ";
+    results_display.innerText = "";
+    disNum1 = "";
+    disNum2 = "";
+    lastOperation = "";
 });
 
 clearBtn.addEventListener("click",(e)=>{
-    disNum1 = " ";
-    disNum2 = " ";
-    display_1.innerText = " ";
+    disNum1 = "";
+    disNum2 = "";
+    display_1.innerText = "";
     display_2.innerText = "0 ";
-    results_display.innerText = " ";
-    result = " ";
+    results_display.innerText = "";
+    result = "";
 });
 
 deleteBtn.addEventListener("click", (e)=>{
-    disNum2 = " ";
-    display_2.innerText = " ";
+    disNum2 = "";
+    display_2.innerText = "";
 });
 
